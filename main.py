@@ -42,6 +42,10 @@ def verify():
     algorithm = request.args.get('algorithm')
     otp_value = request.args.get('otp_value')
     counter = request.args.get('counter')
+    if not _check_exists(user_id):
+        return jsonify(
+            error="user not exists"
+        ), 404  # user not exists
     secret_key = _get_secret_key(user_id)
     if algorithm == "totp":
         otp = pyotp.TOTP(secret_key)
