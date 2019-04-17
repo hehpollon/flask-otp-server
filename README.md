@@ -27,6 +27,7 @@ $ python3 main.py
     "secret_key":"FDDM2IOYWXTV4P53"
 }
 ```
+> Provisioning_uri can then be rendered as a QR Code (for example, using https://github.com/neocotic/qrious) which can then be scanned and added to the users list of OTP credentials.
 ### - verify otp
 #### request:
 ```
